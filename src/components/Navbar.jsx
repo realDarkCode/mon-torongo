@@ -12,6 +12,19 @@ const navLinks = [
   { title: "সহায়তা", path: "/faq" },
 ];
 
+const WaveLines = () => (
+  <div className="flex items-center gap-1 h-8 scale-90">
+    {[...Array(6)].map((_, i) => (
+      <div
+        key={i}
+        className={`w-1 bg-white rounded transition-all wave-line wave-line-${
+          i + 1
+        }`}
+      />
+    ))}
+  </div>
+);
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,8 +35,9 @@ const Navbar = () => {
   return (
     <nav className="bg-brand-500 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold text-xl">
+        <div className="text-white font-bold text-xl flex items-center justify-center gap-2">
           <a href="/">মন তরঙ্গ </a>
+          <WaveLines />
         </div>
         <div className="hidden bg-light-400 md:flex space-x-4 p-2.5 rounded-[18px]">
           {navLinks.map((link) => (

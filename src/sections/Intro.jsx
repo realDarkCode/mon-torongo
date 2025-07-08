@@ -4,13 +4,19 @@ import { twMerge } from "tailwind-merge";
 import Button from "../components/button"; // Assuming button.jsx is in the same directory
 import { modes } from "../constants";
 
+const getRandomNumber = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 const ModeList = ({ className }) => {
   const [activeIdx, setActiveIdx] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIdx((prev) => (prev + 1) % modes.length);
-    }, 2000);
+      setActiveIdx(() => getRandomNumber(0, modes.length - 1) % modes.length);
+    }, 1.5 * 1000);
     return () => clearInterval(interval);
   }, []);
 
