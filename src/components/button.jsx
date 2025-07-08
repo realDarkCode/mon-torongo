@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
@@ -7,11 +8,13 @@ const Button = ({
   children,
   icon,
   iconPosition = "right",
+  iconAnimation,
   className = "",
   ...props
 }) => {
-  const baseClasses =
-    "inline-flex items-center gap-2 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:cursor-pointer";
+  const baseClasses = twMerge(
+    "inline-flex items-center gap-2 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:cursor-pointer"
+  );
 
   const variants = {
     primary: "text-white bg-light-400  hover:bg-white hover:text-brand-950 ",
@@ -24,15 +27,15 @@ const Button = ({
   };
 
   const sizes = {
-    sm: "px-3 py-1.5 text-sm rounded-md",
-    md: "px-4 py-2 text-base rounded-md",
-    lg: "px-6 py-3 text-lg rounded-lg",
+    sm: "px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm rounded-md",
+    md: "px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base rounded-md",
+    lg: "px-4 py-2 text-base sm:px-6 sm:py-3 sm:text-lg rounded-lg",
   };
 
   const iconSizes = {
-    sm: "w-4 h-4",
-    md: "w-4 h-4",
-    lg: "w-5 h-5",
+    sm: "w-3 h-3 sm:w-4 sm:h-4",
+    md: "w-4 h-4 sm:w-5 sm:h-5",
+    lg: "w-5 h-5 sm:w-6 sm:h-6",
   };
 
   return (
@@ -46,11 +49,27 @@ const Button = ({
       {...props}
     >
       {icon && iconPosition === "left" && (
-        <ArrowLeft className={twMerge("inline", iconSizes[size])} />
+        <ArrowLeft
+          className={twMerge(
+            clsx(
+              "inline",
+              iconSizes[size],
+              iconAnimation && `animate-${iconAnimation}`
+            )
+          )}
+        />
       )}
       {children}
       {icon && iconPosition === "right" && (
-        <ArrowRight className={twMerge("inline", iconSizes[size])} />
+        <ArrowRight
+          className={twMerge(
+            clsx(
+              "inline",
+              iconSizes[size],
+              iconAnimation && `animate-${iconAnimation}`
+            )
+          )}
+        />
       )}
     </button>
   );
