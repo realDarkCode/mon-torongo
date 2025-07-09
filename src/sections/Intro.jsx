@@ -16,24 +16,29 @@ const ModeList = ({ className }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIdx(() => getRandomNumber(0, modes.length - 1) % modes.length);
-    }, 1.5 * 1000);
+    }, 2 * 1000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div
-      className={twMerge("flex flex-wrap justify-center gap-4 mt-8", className)}
+      className={twMerge(
+        "grid grid-cols-3 sm:grid-cols-6 gap-4 mt-8 place-items-center grid-flow-row-dense",
+        className
+      )}
     >
       {modes.map((mode, idx) => (
         <button
           key={mode.id}
           className={twMerge(
-            "bg-light-400 text-white transition-all duration-300 ease-in-out py-2 px-4 rounded-full flex items-center gap-2 cursor-pointer",
-            idx === activeIdx ? "-translate-y-3" : "translate-y-0"
+            "bg-light-400 text-white transition-all duration-300 ease-in-out py-2 px-4 rounded-full flex items-center gap-2 cursor-pointer  ",
+            idx === activeIdx
+              ? "bg-white/40  sm:-translate-y-3"
+              : "sm:translate-y-0"
           )}
         >
-          <img src={mode.imgPath} className="size-8" />
-          <span className="text-sm">{mode.label}</span>
+          <img src={mode.imgPath} className="size-4 sm:size-8" />
+          <span className="text-xs md:text-sm">{mode.label}</span>
         </button>
       ))}
     </div>
@@ -42,7 +47,7 @@ const ModeList = ({ className }) => {
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-radial  from-[#1E54CD] to-brand-500 flex items-center justify-center text-center text-white p-4">
+    <section className="min-h-screen bg-radial  from-[#1E54CD] to-brand-500 flex items-center justify-center text-center text-white p-4 md:rounded-b-2xl lg:rounded-b-3xl">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-medium mb-4">
           আপনার মানসিক স্বাস্থ্য, <br />

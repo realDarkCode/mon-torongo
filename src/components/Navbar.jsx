@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-brand-500 p-4">
+    <nav className="bg-brand-500 p-4 md:rounded-t-2xl lg:rounded-t-3xl ">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white font-bold text-xl flex items-center justify-center gap-2">
           <a href="/">মন তরঙ্গ </a>

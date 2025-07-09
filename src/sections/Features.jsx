@@ -21,7 +21,7 @@ function Features() {
         {features.map((feature) => (
           <div
             className={twMerge(
-              "bg-light-300 rounded-xl p-6  flex flex-col gap-4 transition-transform duration-300 ease-in-out hover:rotate-[1deg] hover:-rotate-x-2 hover:scale-105 cursor-pointer ring-1 ring-neutral-200",
+              "bg-light-300 rounded-xl p-6  flex flex-col gap-4 transition-transform duration-300 ease-in-out hover:rotate-[1deg] hover:-rotate-x-2 hover:scale-105 cursor-pointer ring-1 ring-neutral-300",
               "feature-card"
             )}
             key={feature.id}
@@ -31,7 +31,7 @@ function Features() {
               alt="Track Icon"
               className="size-10 md:size-12 xl:size-15"
             />
-            <h3 className="text-lg lg:text-lg xl:text-2xl font-medium text-neutral-400">
+            <h3 className="text-lg lg:text-lg xl:text-2xl font-medium text-neutral-900">
               {feature.title}
             </h3>
             <p className="text-gray-600 text-[12px]  md:text-sm">
