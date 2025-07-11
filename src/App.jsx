@@ -2,10 +2,10 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
+import About from "./pages/about/About";
+import Donation from "./pages/Donation";
 import Faq from "./pages/Faq";
-import Features from "./pages/Features";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/features" element={<Features />} />
+          <Route path="/donation" element={<Donation />} />
           <Route path="/faq" element={<Faq />} />
         </Routes>
         <Footer />

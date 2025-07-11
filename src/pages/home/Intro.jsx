@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-import Button from "../components/button"; // Assuming button.jsx is in the same directory
-import { modes } from "../constants";
+import Button from "../../components/button"; // Assuming button.jsx is in the same directory
+import { modes } from "../../constants";
 
 const getRandomNumber = (min, max) => {
   min = Math.ceil(min);

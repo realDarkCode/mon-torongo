@@ -1,4 +1,4 @@
-import videoThumbnail from "../assets/video-thumbnail.jpg";
+import videoThumbnail from "../../assets/video-thumbnail.jpg";
 const VideoIntro = () => {
   return (
     <section className="w-full px-4 py-10 md:py-16 bg-white text-center">

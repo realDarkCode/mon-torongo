@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { features } from "../constants";
+import { features } from "../../constants";
 
 function Features() {
   return (

@@ -8,8 +8,8 @@ import Button from "./button";
 const navLinks = [
   { title: "হোম", path: "/" },
   { title: "আমাদের সম্পর্কে", path: "/about" },
-  { title: "বৈশিষ্ট্য", path: "/features" },
-  { title: "সহায়তা", path: "/faq" },
+  { title: "সহায়তা", path: "/donation" },
+  { title: "সাধারণ জিজ্ঞাসা", path: "/faq" },
 ];
 
 const WaveLines = () => (

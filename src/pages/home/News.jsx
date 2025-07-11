@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
-import { newsItems } from "../constants";
+import { newsItems } from "../../constants";
 
 const News = () => {
   return (

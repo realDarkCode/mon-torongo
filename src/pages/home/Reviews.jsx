@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 
 import { useEffect, useState } from "react";
-import { reviewList } from "../constants";
+import { reviewList } from "../../constants";
 
 const reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(1);

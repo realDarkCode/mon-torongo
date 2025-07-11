@@ -1,6 +1,6 @@
-import showcaseImg1 from "../assets/showcase-1.jpg";
-import showcaseImg2 from "../assets/showcase-2.jpg";
-import showcaseImg3 from "../assets/showcase-3.jpg";
+import showcaseImg1 from "../../assets/showcase-1.jpg";
+import showcaseImg2 from "../../assets/showcase-2.jpg";
+import showcaseImg3 from "../../assets/showcase-3.jpg";
 
 const Showcase = () => {
   return (

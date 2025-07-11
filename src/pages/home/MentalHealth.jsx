@@ -1,5 +1,5 @@
-import Button from "../components/button";
-import { mentalHealthItems } from "../constants";
+import Button from "../../components/button";
+import { mentalHealthItems } from "../../constants";
 
 const MentalHealthCards = () => {
   return (
