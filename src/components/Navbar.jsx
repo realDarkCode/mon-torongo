@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import Button from "./button";
 
@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:block">
           <Button variant="secondary" icon iconPosition="right" size="md">
-            নিবন্ধন করুন
+            <Link to="/login">নিবন্ধন করুন</Link>
           </Button>
         </div>
         <div className="md:hidden">
